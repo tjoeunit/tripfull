@@ -23,6 +23,8 @@ ALTER TABLE members
 		);
 
 /* 여행스토리 */
+		
+
 CREATE TABLE story (
 	story_no NUMBER NOT NULL, /* 여행스토리번호 */
 	members_no NUMBER, /* 멤버번호 */
@@ -318,4 +320,4 @@ nocache;
 INSERT INTO members (members_no, members_id, members_pw, members_name)
 VALUES (members_seq.nextval, 'admin', '1004', '운영자');
 
-commit;
+commit
