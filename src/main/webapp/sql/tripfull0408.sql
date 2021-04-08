@@ -318,4 +318,4 @@ nocache;
 INSERT INTO members (members_no, members_id, members_pw, members_name)
 VALUES (members_seq.nextval, 'admin', '1004', '운영자');
 
-commit;
+commit
