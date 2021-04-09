@@ -127,7 +127,7 @@
 						<li><a href="#">숙소</a></li>
 						<li><a href="#">렌터카 & 교통</a></li>
 						<li><a href="#">액티비티</a></li>
-						<li><a href="getLanTripList.jsp">랜선투어</a></li>
+						<li><a href="getLTList.jsp">랜선투어</a></li>
 						<li><a href="#">여행이야기</a></li>
 					</ul>
 				</div>
