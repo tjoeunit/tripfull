@@ -1,4 +1,4 @@
-package com.tripfull.test;
+package com.tripfull.start;
 
 import java.text.DateFormat;
 import java.util.Date;
