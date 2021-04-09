@@ -20,7 +20,7 @@ import com.tripfull.biz.story.StoryVO;
 
 @Controller
 @SessionAttributes("board")
-public class BoardController {
+public class StoryController {
 	@Autowired
 	private StoryService storyService;
 	
@@ -96,19 +96,19 @@ public class BoardController {
 	public String getBoardList(StoryVO vo, Model model) {	//ModelAndView의 Model 딴에 있는 변수를 매개변수로
 		System.out.println("글 목록 검색 처리");
 	// 검색 기능 추가 Null check
-/*
-		if(vo.getSearchCondition() == null) {
-			vo.setSearchCondition("TITLE");
+
+		if(vo.getStorySearchCondition() == null) {
+			vo.setStorySearchCondition("TITLE");
 		}
 		
-		if(vo.getSearchKeyword() == null) {
-			vo.setSearchKeyword("");
+		if(vo.getStorySearchKeyword() == null) {
+			vo.setStorySearchKeyword("");
 		}
 		
-		model.addAttribute("boardList", boardService.getBoardList(vo));		//key Value
+		model.addAttribute("storyList", storyService.getStoryList(vo));		//key Value
 		
-		return "getBoardList.jsp";
-	*/
+		return "getStoryList.jsp";
+
 	}
 
 // 글 상세 조회

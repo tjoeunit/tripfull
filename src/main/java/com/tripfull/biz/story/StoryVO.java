@@ -17,6 +17,8 @@ public class StoryVO {
 	private int story_re_seq;
 	private int story_cnt;
 	private Date story_date;
+	private String storySearchCondition;
+	private String storySearchKeyword;
 	private MultipartFile storyUploadFile;
 	
 	
@@ -97,6 +99,18 @@ public class StoryVO {
 	}
 	public void setStoryUploadFile(MultipartFile storyUploadFile) {
 		this.storyUploadFile = storyUploadFile;
+	}
+	public String getStorySearchCondition() {
+		return storySearchCondition;
+	}
+	public void setStorySearchCondition(String storySearchCondition) {
+		this.storySearchCondition = storySearchCondition;
+	}
+	public String getStorySearchKeyword() {
+		return storySearchKeyword;
+	}
+	public void setStorySearchKeyword(String storySearchKeyword) {
+		this.storySearchKeyword = storySearchKeyword;
 	}
 	
 	

@@ -36,17 +36,17 @@ public class StoryDAOMyBatisFirst extends SqlSessionDaoSupport{
 	
 	public List<StoryVO> getStoryList(StoryVO vo) {
 		// 검색 기능 전
-		return myBatis.selectList("StoryDAOTemp.getBoardList", vo);
+		//return myBatis.selectList("StoryDAOTemp.getBoardList", vo);
 		
 		// 검색 기능 후
-		/*		if(vo.getSearchCondition().equals("TITLE")){
-			return getSqlSession().selectList("BoardDAOTemp.getBoardList_T", vo);
-		}else if(vo.getSearchCondition().equals("CONTENT")){
-			return getSqlSession().selectList("BoardDAOTemp.getBoardList_C", vo);			
+		if(vo.getStorySearchCondition().equals("TITLE")){
+			return getSqlSession().selectList("StoryDAOTemp.getStoryList_T", vo);
+		}else if(vo.getStorySearchCondition().equals("CONTENT")){
+			return getSqlSession().selectList("StoryDAOTemp.getStoryList_C", vo);			
 		}else {
-			return getSqlSession().selectList("BoardDAOTemp.getBoardList_T", vo);
+			return getSqlSession().selectList("StoryDAOTemp.getStoryList_T", vo);
 		}
 	}
-	*/
-	}
+
 }
+
