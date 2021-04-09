@@ -1,9 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<<<<<<< Updated upstream
+=======
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< Updated upstream
 <title>랜선여행::여행가득</title>
 
 <style type="text/css">
@@ -126,6 +134,59 @@
 			상품12
 		</div>
 	</div> 
+=======
+<title>랜선투어 : 여행가득</title>
+<style type="text/css">
+	.lanTripFilter{
+		margin: auto;
+		width: 90%;
+		border: 1px solid #58CCFF;
+		padding: 10px;
+	}
+	.selectBox{
+		text-align: center;
+		border-right: 3px solid #58CCFF;
+		padding: 5px;
+	}
+
+</style>
+
+</head>
+
+<body>
+	<h1 align="left">랜선투어</h1><br>
+	<table class="lanTripFilter">
+		<tr>
+			<td class="selectBox">카테고리</td>
+			<td>전체</td>
+			<td>사진투어</td>
+			<td>영상투어</td>
+		</tr>
+		<tr>
+			<td class="selectBox">가격대</td>
+			<td colspan="3"><input type="number"/>원 이하</td>
+		</tr>
+		<tr>
+			<td class="selectBox">평점</td>
+			<td colspan="3">
+				<input type="radio" name="lanTrip_reviewRate" value="전체" checked/>전체
+				<input type="radio" name="lanTrip_reviewRate" value="4점 이상" />4점 이상
+				<input type="radio" name="lanTrip_reviewRate" value="5점만" />5점만
+			</td>
+		</tr>
+		<tr>
+			<td class="selectBox">여행지</td>
+			<td colspan="3">
+				<input type="checkbox" name="lanTrip_Continent" value="아시아" />아시아
+				<input type="checkbox" name="lanTrip_Continent" value="북아메리카" />북아메리카
+				<input type="checkbox" name="lanTrip_Continent" value="남아메리카" />남아메리카
+				<input type="checkbox" name="lanTrip_Continent" value="유럽" />유럽
+				<input type="checkbox" name="lanTrip_Continent" value="아프리카" />아프리카
+				<input type="checkbox" name="lanTrip_Continent" value="오세아니아" />오세아니아
+			</td>
+		</tr>
+	</table>
+>>>>>>> Stashed changes
 	
 </body>
 </html>
