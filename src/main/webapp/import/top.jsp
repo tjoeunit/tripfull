@@ -3,11 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="shortcut icon" href="./img/favicon16.ico">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 
 <style>
+/* body{
+		padding-top: 130px;
+	} */
+	
 	.nav {
 		background-color: white;
 		position: fixed;
@@ -122,7 +127,7 @@
 						<li><a href="#">숙소</a></li>
 						<li><a href="#">렌터카 & 교통</a></li>
 						<li><a href="#">액티비티</a></li>
-						<li><a href="#">랜선투어</a></li>
+						<li><a href="getLanTripList.jsp">랜선투어</a></li>
 						<li><a href="#">여행이야기</a></li>
 					</ul>
 				</div>
