@@ -8,6 +8,7 @@
 </head>
 <body>
 	시작해볼까
+	<a href="getBoardList.do">항공게시판</a>
 	<hr>
 </body>
 </html>

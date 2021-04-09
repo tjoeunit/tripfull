@@ -9,7 +9,7 @@
 	
 		<!-- alias="board" 라고 설정 -->
 		<!-- mapping 파일에서는 resultType에 board라고 사용 -->
-		<!-- <typeAlias alias="board" type="com.springbook.biz.board.BoardVO"/> -->
+		<typeAlias alias="board" type="com.tripfull.biz.board.flightBoardVO"/>
 		
 	</typeAliases>	
 	
@@ -17,7 +17,7 @@
 	<mappers>
 	
 		<!-- 매핑파일 설정 -->
-		<!-- <mapper resource="mappings/springboard-mapping.xml"/> -->
+		<mapper resource="mappings/springboard-mapping.xml"/>
 		
 	</mappers>
 	
