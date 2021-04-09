@@ -29,6 +29,8 @@
 		expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	
+	<!-- Annotation 등록 : view 하위 패키지의 Bean 객체 생성 및 사용-->
+	<context:component-scan base-package="com.tripfull.view" />
 	
  	<mvc:default-servlet-handler />
 	<mvc:annotation-driven/>
