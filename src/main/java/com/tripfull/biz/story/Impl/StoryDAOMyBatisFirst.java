@@ -1,42 +1,45 @@
-package com.tripfull.test.story.dao;
+package com.tripfull.biz.story.Impl;
 
 import java.util.List;
 
-import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.tripfull.biz.story.StoryVO;
+
 
 @Repository
 public class StoryDAOMyBatisFirst extends SqlSessionDaoSupport{
-/*
+
 	@Autowired
 	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
 		super.setSqlSessionFactory(sqlSessionFactory);
 	}
 	
-	public void insertBoard(BoardVO vo) {
-		getSqlSession().insert("BoardDAOTemp.insertBoard", vo);
+	public void insertStory(StoryVO vo) {
+		getSqlSession().insert("StoryDAOTemp.insertBoard", vo);
 	}
 	
-	public void updateBoard(BoardVO vo) {
-		getSqlSession().update("BoardDAOTemp.updateBoard", vo);
+	public void updateStory(StoryVO vo) {
+		getSqlSession().update("StoryDAOTemp.updateBoard", vo);
 	}
 	
-	public void deleteBoard(BoardVO vo) {
-		getSqlSession().delete("BoardDAOTemp.deleteBoard", vo);
+	public void deleteStory(StoryVO vo) {
+		getSqlSession().delete("StoryDAOTemp.deleteBoard", vo);
 	}
 	
-	public BoardVO getBoard(BoardVO vo) {
-		return getSqlSession().selectOne("BoardDAOTemp.getBoard", vo);
+	public StoryVO getStory(StoryVO vo) {
+		return getSqlSession().selectOne("StoryDAOTemp.getBoard", vo);
 	}
 	
-	public List<BoardVO> getBoardList(BoardVO vo) {
+	public List<StoryVO> getStoryList(StoryVO vo) {
 		// 검색 기능 전
-		//return myBatis.selectList("BoardDAOTemp.getBoardList", vo);
-		if(vo.getSearchCondition().equals("TITLE")){
+		return myBatis.selectList("StoryDAOTemp.getBoardList", vo);
+		
+		// 검색 기능 후
+		/*		if(vo.getSearchCondition().equals("TITLE")){
 			return getSqlSession().selectList("BoardDAOTemp.getBoardList_T", vo);
 		}else if(vo.getSearchCondition().equals("CONTENT")){
 			return getSqlSession().selectList("BoardDAOTemp.getBoardList_C", vo);			
@@ -45,4 +48,5 @@ public class StoryDAOMyBatisFirst extends SqlSessionDaoSupport{
 		}
 	}
 	*/
+	}
 }

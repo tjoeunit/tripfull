@@ -1,4 +1,4 @@
-package com.tripfull.test.story.controller;
+package com.tripfull.view.story;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

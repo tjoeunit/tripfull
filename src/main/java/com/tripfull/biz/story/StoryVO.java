@@ -1,10 +1,10 @@
-package com.tripfull.product.story;
+package com.tripfull.biz.story;
 
 import java.util.Date;
 
 public class StoryVO {
 	private int story_no;
-	private int user_no;
+	private int members_no;
 	private String story_title;
 	private String story_content;
 	private String story_imgname;
@@ -23,11 +23,11 @@ public class StoryVO {
 	public void setStory_no(int story_no) {
 		this.story_no = story_no;
 	}
-	public int getUser_no() {
-		return user_no;
+	public int getMembers_no() {
+		return members_no;
 	}
-	public void setUser_no(int user_no) {
-		this.user_no = user_no;
+	public void setMembers_no(int members_no) {
+		this.members_no = members_no;
 	}
 	public String getStory_title() {
 		return story_title;
