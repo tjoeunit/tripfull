@@ -2,6 +2,8 @@ package com.tripfull.biz.story;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class StoryVO {
 	private int story_no;
 	private int members_no;
@@ -15,6 +17,7 @@ public class StoryVO {
 	private int story_re_seq;
 	private int story_cnt;
 	private Date story_date;
+	private MultipartFile storyUploadFile;
 	
 	
 	public int getStory_no() {
@@ -88,6 +91,12 @@ public class StoryVO {
 	}
 	public void setStory_date(Date story_date) {
 		this.story_date = story_date;
+	}
+	public MultipartFile getStoryUploadFile() {
+		return storyUploadFile;
+	}
+	public void setStoryUploadFile(MultipartFile storyUploadFile) {
+		this.storyUploadFile = storyUploadFile;
 	}
 	
 	
