@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>랜선여행 상품이름</title>
 </head>
 <body>
-	시작해볼까
-	<hr>
-	
-	<a href="getLanTripList.jsp">랜선투어</a>
+
+	<h1>랜선여행 상세페이지</h1>
+
 </body>
 </html>

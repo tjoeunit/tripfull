@@ -131,6 +131,10 @@ ALTER TABLE lantrip
 			lantrip_no
 		);
 
+/*연습용 데이터 삽입*/
+insert into lantrip values('1','서울','떠나자 서울로','그림','썸네일','10000','서울');
+select * from lantrip;
+
 /* 결제 */
 CREATE TABLE payment (
 	payment_no NUMBER NOT NULL, /* 결제번호 */
