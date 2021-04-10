@@ -66,6 +66,10 @@ CREATE TABLE flight (
 	flight_departure VARCHAR2(30), /* 항공출발지 */
 	flight_arrival VARCHAR2(30) /* 항공도착지 */
 );
+INSERT INTO flight(flight_no, flight_title, flight_content, flight_price, flight_departure, flight_arrival)
+					VALUES (1,'진에어','제주여행가즈아',10000,'김포','제주');
+
+select * from FLIGHT;
 
 ALTER TABLE flight
 	ADD
