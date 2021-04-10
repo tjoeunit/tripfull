@@ -23,6 +23,8 @@ ALTER TABLE members
 		);
 
 /* 여행스토리 */
+		
+
 CREATE TABLE story (
 	story_no NUMBER NOT NULL, /* 여행스토리번호 */
 	members_no NUMBER, /* 멤버번호 */
