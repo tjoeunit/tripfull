@@ -97,6 +97,11 @@
 		text-align: center;
 	}
 	
+	.navBackDiv {
+		height: 120px;
+		width: 100%;
+		clear: both;
+	}
 	
 	.navListDiv {
 		clear: both;
@@ -130,8 +135,10 @@
 						<li><a href="getLTList.jsp">랜선투어</a></li>
 						<li><a href="#">여행이야기</a></li>
 					</ul>
-				</div>
-				
+				</div>				
 			</div>
 		</nav>
+		<div class="navBackDiv">
+			
+		</div>
 </header>

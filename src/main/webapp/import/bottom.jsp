@@ -6,7 +6,7 @@
 
 <footer>
 	<div style="border-top: 1px solid gray;">		
-		dfsaadfs
+		bottomfdsfadsfadsfasdfdsa
 	</div>
 </footer>
 </body>
