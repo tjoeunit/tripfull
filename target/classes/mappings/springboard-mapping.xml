@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BoardDAOTemp">
+
+	<!-- 4월 9일 복사한 자료입니다 수정필요합니다 -->
+
+	<!--
+	<insert id="insertBoard">
+	<![CDATA[
+		insert into springboard(seq, title, writer, content)
+		values((select nvl(max(seq), 0)+1 from springboard),#{title},#{writer},#{content})
+	]]>
+	</insert>
+	-->
+	<!-- <![CDATA[]]> -->
+	<!-- 캐릭터 데이터 : 문자로 인식하라는 것 (비교연산자 등의 오류가 발생하지 않도록 함)-->
+	<!--
+	<update id="updateBoard">
+	<![CDATA[
+		update springboard set title=#{title}, content=#{content} where seq=#{seq}
+	]]>
+	</update>
+
+	<delete id="deleteBoard">
+	<![CDATA[
+		delete springboard where seq=#{seq}
+	]]>
+	</delete>
+
+	<select id="getBoard" resultType="board">
+	<![CDATA[
+		select * from springboard where seq=#{seq}
+	]]>
+	</select>
+
+	<select id="getBoardList_T" resultType="board">
+	<![CDATA[
+		select * from springboard where title like '%'||#{searchKeyword}||'%' order by seq desc
+	]]>
+	</select>
+
+	<select id="getBoardList_C" resultType="board">
+	<![CDATA[
+		select * from springboard where content like '%'||#{searchKeyword}||'%' order by seq desc
+	]]>
+	</select>
+	-->
+
+</mapper>
