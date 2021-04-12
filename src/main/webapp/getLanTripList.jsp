@@ -80,7 +80,7 @@
 	
  	<div class="Lan_Products_Area">
 		<div class="Lan_Products">
-			<div class="Lan_Product_Thum" onclick="location.href='getLTBoard.jsp'">이미지삽입 / 테투리는 없앨예정</div>
+			<div class="Lan_Product_Thum">이미지삽입 / 테투리는 없앨예정</div>
 			<div>상품이름</div>
 			<div>평점</div>
 			<div>가격</div>

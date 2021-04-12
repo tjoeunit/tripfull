@@ -2,51 +2,37 @@ package com.tripfull.biz.lantrip.impl;
 
 import java.util.List;
 
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.tripfull.biz.lantrip.LanTripVO;
 
 @Repository
-public class LanTripDAO extends SqlSessionDaoSupport{
-
-	SqlSession myBatis = getSqlSession();
+public class LanTripDAO {
 	
 	@Autowired
-	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
-		super.setSqlSessionFactory(sqlSessionFactory);
-	}
+	private SqlSessionTemplate mybatis;	
 	
-	public void insertLTBoard(LanTripVO vo) {
-		getSqlSession().insert("BoardDAOTemp.insertBoard", vo);
-	}
+	public void insertLanTrip(LanTripVO vo){
+		mybatis.insert("BoardDAOTemp.insertLanTrip", vo);
+	  }
 	
-	public void updateLTBoard(LanTripVO vo) {
-		getSqlSession().update("BoardDAOTemp.updateBoard", vo);
+    public void updateLanTrip(LanTripVO vo){
+    	mybatis.update("BoardDAOTemp.updateLanTrip", vo);
 	}
-	
-	public void deleteLTBoard(LanTripVO vo) {
-		getSqlSession().delete("BoardDAOTemp.deleteBoard", vo);
+	  
+	public void deleteLanTrip(LanTripVO vo){
+		  mybatis.delete("BoardDAOTemp.deleteLanTrip", vo);
+	}  
+	  
+	public LanTripVO getLanTrip(LanTripVO vo) {
+	  return mybatis.selectOne("BoardDAOTemp.getLanTrip", vo);
 	}
-	
-	public LanTripVO getLTBoard(LanTripVO vo) {
-		return getSqlSession().selectOne("BoardDAOTemp.getBoard", vo);
-	}
-	
-	public List<LanTripVO> getLTBoardList(LanTripVO vo){
-		// 검색 기능 전
-		return myBatis.selectList("BoardDAOTemp.getBoard", vo);
-		/*if(vo.getSearchCondition().equals("TITLE")) {
-			return getSqlSession().selectList("BoardDAOTemp.getBoardList_T", vo);
-		}else if(vo.getSearchCondition().equals("CONTENT")){
-			return getSqlSession().selectList("BoardDAOTemp.getBoardList_C", vo);
-		}else {
-			return getSqlSession().selectList("BoardDAOTemp.getBoardList_T", vo);
-		}*/
-	}
-
-	
+	  
+	public List<LanTripVO> getLanTripList(LanTripVO vo) {
+		  // 검색 기능 전 
+		  return mybatis.selectList("BoardDAOTemp.getLanTripList", vo);
+		 
+    } 
 }
