@@ -1,7 +1,7 @@
 <%@page contentType="text/html; charset=UTF-8"%>
 <%@ include file="import/top.jsp" %>
 
-<style>
+<style type="text/css">
 .story_insert{
 	color: white;
 	font: bold;
@@ -23,6 +23,9 @@
 .insert_story_file{
 	background-color: #58CCFF;
 }
+.push_story{	/* 안먹음 */
+	text-align: center;
+}
 
 </style>
 
@@ -33,8 +36,6 @@
 <title>여행 이야기 등록</title>
 </head>
 <body>
-<!-- <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
- -->
  <script src="ckeditor/ckeditor.js"></script>
 
 	</script>
@@ -61,8 +62,10 @@
 					</td>
 				</tr>
 				<tr>
-				<hr>
-					<td colspan="2" align="center"><input type="submit" value=" 새글 등록 " /></td>
+					<hr>
+					<div class="push_story">
+						<td><input type="submit" value=" 새글 등록 " /></td>
+					</div>
 				</tr>
 			</table>
 		</form>
