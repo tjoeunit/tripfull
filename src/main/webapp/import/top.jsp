@@ -9,9 +9,9 @@
 </head>
 
 <style>
-/* body{
+	body{
 		padding-top: 130px;
-	} */
+	}
 	
 	.nav {
 		background-color: white;
@@ -97,11 +97,6 @@
 		text-align: center;
 	}
 	
-	.navBackDiv {
-		height: 120px;
-		width: 100%;
-		clear: both;
-	}
 	
 	.navListDiv {
 		clear: both;
@@ -132,13 +127,11 @@
 						<li><a href="#">숙소</a></li>
 						<li><a href="#">렌터카 & 교통</a></li>
 						<li><a href="#">액티비티</a></li>
-						<li><a href="getLTList.jsp">랜선투어</a></li>
+						<li><a href="getLTList.do">랜선투어</a></li>
 						<li><a href="#">여행이야기</a></li>
 					</ul>
-				</div>				
+				</div>
+				
 			</div>
 		</nav>
-		<div class="navBackDiv">
-			
-		</div>
 </header>

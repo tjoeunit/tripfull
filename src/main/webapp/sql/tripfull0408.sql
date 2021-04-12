@@ -23,8 +23,6 @@ ALTER TABLE members
 		);
 
 /* 여행스토리 */
-		
-
 CREATE TABLE story (
 	story_no NUMBER NOT NULL, /* 여행스토리번호 */
 	members_no NUMBER, /* 멤버번호 */
@@ -68,10 +66,6 @@ CREATE TABLE flight (
 	flight_departure VARCHAR2(30), /* 항공출발지 */
 	flight_arrival VARCHAR2(30) /* 항공도착지 */
 );
-INSERT INTO flight(flight_no, flight_title, flight_content, flight_price, flight_departure, flight_arrival)
-					VALUES (1,'진에어','제주여행가즈아',10000,'김포','제주');
-
-select * from FLIGHT;
 
 ALTER TABLE flight
 	ADD
@@ -136,10 +130,6 @@ ALTER TABLE lantrip
 		PRIMARY KEY (
 			lantrip_no
 		);
-
-/*연습용 데이터 삽입*/
-insert into lantrip values('1','서울','떠나자 서울로','그림','썸네일','10000','서울');
-select * from lantrip;
 
 /* 결제 */
 CREATE TABLE payment (
@@ -328,4 +318,4 @@ nocache;
 INSERT INTO members (members_no, members_id, members_pw, members_name)
 VALUES (members_seq.nextval, 'admin', '1004', '운영자');
 
-commit
+commit;
