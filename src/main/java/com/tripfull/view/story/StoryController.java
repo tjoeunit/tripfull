@@ -25,7 +25,7 @@ public class StoryController {
 	private StoryService storyService;
 	
 // 글 등록
-	@RequestMapping("/insertStory")
+	@RequestMapping("/insertStory.do")
 	public String insertStory(StoryVO vo, HttpSession session) throws IOException {
 		System.out.println("글 등록 처리");
 		
@@ -60,7 +60,7 @@ public class StoryController {
 	}
 	
 // 글 수정
-	@RequestMapping("/updateStory")
+	@RequestMapping("/updateStory.do")
 											//사용자로부터 전달 받은 TITLE과 CONTENT 값 업데이트
 	public String updateStory(@ModelAttribute("story") StoryVO vo) {		//boardVO에 값을 담아 "board"에 담아줌
 		System.out.println("글 수정 처리" +vo);
@@ -73,7 +73,7 @@ public class StoryController {
 	}
 	
 // 글 삭제
-	@RequestMapping("/deleteStory")
+	@RequestMapping("/deleteStory.do")
 	public String deleteBoard(StoryVO vo) {
 		System.out.println("글 삭제 기능 처리");
 				
@@ -83,7 +83,7 @@ public class StoryController {
 	}
 	
 // RequestMapping이 실행되기 직전에 이 메소드가 먼저 호출 되어진다.(model에 값이 들어감)
-	@ModelAttribute("conditionMap")		//"conditionMap"에 return 값을 저장
+	@ModelAttribute("conditionMap.do")		//"conditionMap"에 return 값을 저장
 	public Map<String, String> searchConditionMap() {
 		Map<String, String> conditionMap = new HashMap<String, String>();
 		conditionMap.put("제목", "TITLE");
@@ -92,7 +92,7 @@ public class StoryController {
 	}
 	
 // 글 목록 보기
-	@RequestMapping("/getStoryList")
+	@RequestMapping("/getStoryList.do")
 	public String getBoardList(StoryVO vo, Model model) {	//ModelAndView의 Model 딴에 있는 변수를 매개변수로
 		System.out.println("글 목록 검색 처리");
 	// 검색 기능 추가 Null check
@@ -112,7 +112,7 @@ public class StoryController {
 	}
 
 // 글 상세 조회
-	@RequestMapping("/getStory")
+	@RequestMapping("/getStory.do")
 	public String getBoard(StoryVO vo, Model model) {
 		System.out.println("글 상세 조회 처리");
 		
