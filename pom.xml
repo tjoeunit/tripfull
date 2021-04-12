@@ -148,7 +148,7 @@
 			<version>1</version>
 		</dependency>
 
-<!-- json -->
+		<!-- json -->
 		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-core</artifactId>

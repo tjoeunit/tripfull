@@ -54,6 +54,7 @@
 	
 	<!-- Spring & MyBatis 연동방법 1 -->
 	<!-- BoardDAOMybatisFirst -->
+	
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="configLocation" value="classpath:sql-map-config.xml"></property>

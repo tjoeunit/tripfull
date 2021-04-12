@@ -54,5 +54,6 @@ public class BoardDAOMyBatisFirst extends SqlSessionDaoSupport{
   public List<flightBoardVO> getBoardList(flightBoardVO vo) {
 	  // 검색 기능 전 
 	  return myBatis.selectList("BoardDAOTemp.getBoardList", vo);	 
-  }  
+  }
+
 }
