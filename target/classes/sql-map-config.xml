@@ -10,9 +10,10 @@
 	<!-- Alias 설정 -->
 	<typeAliases>
 
-		<!-- alias="board" 라고 설정 -->
-		<!-- mapping 파일에서는 resultType에 board라고 사용 -->
-		<!-- <typeAlias alias="board" type="com.springbook.biz.board.BoardVO"/>  -->
+		<!-- mapping 파일에서는 resultType에 사용 -->
+		<typeAlias alias="board" type="com.tripfull.biz.board.flightBoardVO"/>
+		<typeAlias alias="lantrip" type="com.tripfull.biz.lantrip.LanTripVO"/>
+		<typeAlias alias="story" type="com.tripfull.biz.story.StoryVO"/>
 
 	</typeAliases>
 
@@ -20,12 +21,9 @@
 	<mappers>
 
 		<!-- 매핑파일 설정 -->
-		<!--<mapper resource="mappings/springboard-mapping.xml"/> -->
-
+		<mapper resource="mappings/tripfull-board-mapping.xml"/>
+		<mapper resource="mappings/tripfull-lantrip-mapping.xml"/>
+		<mapper resource="mappings/tripfull-story-mapping.xml"/>
 	</mappers>
-	<!-- 4월 9일 복사한 코드입니다 변경필요 !!! -->
-
-
-
 
 </configuration>

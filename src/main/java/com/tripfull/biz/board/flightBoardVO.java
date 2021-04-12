@@ -1,5 +1,8 @@
 package com.tripfull.biz.board;
 
+import org.apache.ibatis.type.Alias;
+
+@Alias("board")
 public class flightBoardVO { //Value Object , DTO 와 같다 .
 	private int no;
 	private String title;
