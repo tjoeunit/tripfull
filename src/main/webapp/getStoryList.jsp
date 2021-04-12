@@ -4,26 +4,69 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
+<%@ include file="import/top.jsp" %>
+
+<style type="text/css">
+
+.top_story_list{
+	color: white;
+	background-color: #58CCFF;
+}
+.story_top{
+	cellpadding: "0";
+	cellspacing: "0";
+ 	width: 1200px;
+ 	border: 1px solid gray;
+}
+
+.story_search{
+	width: 700px;
+	border: 2px solid gray;
+	margin-bottom: 10px;
+	align-content: right;
+}
+
+.story_no{
+	width: 7%;
+}
+.story_pic{
+	width: 10%;
+}
+.story_subject{
+	width: 40%;
+}
+.story_writer{
+	width: 15%;
+}
+.story_date{
+	width: 15%;
+}
+.story_views{
+	width: 10%;
+}
+
+</style>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>글 목록</title>
+<meta http-equiv="Content-Type">
+<title>여행 이야기</title>
 </head>
 <body>
-	<center>
-		<h1>글 목록</h1>
-		<h3>Tripfull Story</h3>
+	<center>	
+	
+		<h1>여행 이야기</h1>
 		
  		<!-- 검색 시작 -->
-		<form action="getStoryList" method="post">
-			<table border="1" cellpadding="0" cellspacing="0" width="700">
+		<form action="getStoryList.do" method="post">
+			<table class="story_search">
 				<tr>
 					<td align="right">
 					<select name="storySearchCondition">
 						<c:forEach items="${conditionMap}" var="option">
 							<option value="${option.value}">${option.key }
-						</c:forEach>							
+						</c:forEach>
 					</select> 
 					<input name="storySearchKeyword" type="text" /> 
 					<input type="submit" value="검색" /></td>
@@ -32,18 +75,19 @@
 		</form>
 		<!-- 검색 종료 --> 
 		
-		<table border="1" cellpadding="0" cellspacing="0" width="700">
-			<tr>
-				<th style="color:white" bgcolor="#58CCFF" width="100">번호</th>
-				<th style="color:white" bgcolor="#58CCFF" width="200">제목</th>
-				<th style="color:white" bgcolor="#58CCFF" width="150">작성자</th>
-				<th style="color:white" bgcolor="#58CCFF" width="150">등록일</th>
-				<th style="color:white" bgcolor="#58CCFF" width="100">조회수</th>
+		<table class = "story_top">
+			<tr class="top_story_list">
+				<th class="story_no"> 번호</th>
+				<th class="story_pic"> 사진</th>
+				<th class="story_subject">제목</th>
+				<th class="story_writer">작성자</th>
+				<th class="story_date">등록일</th>
+				<th class="story_views">조회수</th>
 			</tr>
 			<c:forEach items="${storyList}" var="story">
 				<tr>
 					<td>${story.story_no}</td>
-					<td align="left"><a href="getStory?story_no=${story.story_no}">
+					<td ><a href="getStory.do?story_no=${story.story_no}">
 							${story.story_title}</a></td>
 					<td>${story.members_no}</td>
 					<td>${story.story_date}</td>
@@ -55,3 +99,4 @@
 	</center>
 </body>
 </html>
+<%@ include file="import/bottom.jsp" %>

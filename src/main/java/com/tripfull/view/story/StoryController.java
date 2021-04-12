@@ -19,13 +19,13 @@ import com.tripfull.biz.story.StoryService;
 import com.tripfull.biz.story.StoryVO;
 
 @Controller
-@SessionAttributes("board")
+@SessionAttributes("story")
 public class StoryController {
 	@Autowired
 	private StoryService storyService;
 	
 // 글 등록
-	@RequestMapping("/insertStory")
+	@RequestMapping("/insertStory.do")
 	public String insertStory(StoryVO vo, HttpSession session) throws IOException {
 		System.out.println("글 등록 처리");
 		
@@ -56,11 +56,11 @@ public class StoryController {
 		*/
 		
 		// 3. 화면 전환
-		return "redirect:getStoryList";
+		return "redirect:getStoryList.do";
 	}
 	
 // 글 수정
-	@RequestMapping("/updateStory")
+	@RequestMapping("/updateStory.do")
 											//사용자로부터 전달 받은 TITLE과 CONTENT 값 업데이트
 	public String updateStory(@ModelAttribute("story") StoryVO vo) {		//boardVO에 값을 담아 "board"에 담아줌
 		System.out.println("글 수정 처리" +vo);
@@ -69,21 +69,21 @@ public class StoryController {
 		// 2. DB 연동 처리
 		storyService.updateStory(vo);
 		// 3. 화면 전환
-		return "redirect:getStoryList";
+		return "redirect:getStoryList.do";
 	}
 	
 // 글 삭제
-	@RequestMapping("/deleteStory")
-	public String deleteBoard(StoryVO vo) {
+	@RequestMapping("/deleteStory.do")
+	public String deleteStory(StoryVO vo) {
 		System.out.println("글 삭제 기능 처리");
 				
 		storyService.deleteStory(vo);
 		
-		return "redirect:getStoryList";
+		return "redirect:getStoryList.do";
 	}
 	
 // RequestMapping이 실행되기 직전에 이 메소드가 먼저 호출 되어진다.(model에 값이 들어감)
-	@ModelAttribute("conditionMap")		//"conditionMap"에 return 값을 저장
+	@ModelAttribute("conditionMap.do")		//"conditionMap"에 return 값을 저장
 	public Map<String, String> searchConditionMap() {
 		Map<String, String> conditionMap = new HashMap<String, String>();
 		conditionMap.put("제목", "TITLE");
@@ -92,8 +92,8 @@ public class StoryController {
 	}
 	
 // 글 목록 보기
-	@RequestMapping("/getStoryList")
-	public String getBoardList(StoryVO vo, Model model) {	//ModelAndView의 Model 딴에 있는 변수를 매개변수로
+	@RequestMapping("/getStoryList.do")
+	public String getStoryList(StoryVO vo, Model model) {	//ModelAndView의 Model 딴에 있는 변수를 매개변수로
 		System.out.println("글 목록 검색 처리");
 	// 검색 기능 추가 Null check
 
@@ -112,13 +112,13 @@ public class StoryController {
 	}
 
 // 글 상세 조회
-	@RequestMapping("/getStory")
-	public String getBoard(StoryVO vo, Model model) {
+	@RequestMapping("/getStory.do")
+	public String getStory(StoryVO vo, Model model) {
 		System.out.println("글 상세 조회 처리");
 		
-		StoryVO board = storyService.getStory(vo);
+		StoryVO story = storyService.getStory(vo);
 		
-		model.addAttribute("story", board);
+		model.addAttribute("story", story);
 		
 		return "getStory.jsp";
 	}

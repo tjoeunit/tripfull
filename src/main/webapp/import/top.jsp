@@ -12,7 +12,7 @@
 	body{
 		padding-top: 130px;
 	}
-	
+
 	.nav {
 		background-color: white;
 		position: fixed;
@@ -72,47 +72,47 @@
 		border-left: solid 0.75em transparent;
 		border-right: solid 0.75em transparent;
 		border-top: solid 0.6em #282828;
-	}	
-	
+	}
+
 	.navDiv {
 		margin-left: 360px;
-		width: 1200px;		
+		width: 1200px;
 	}
-		
+
 	.navImgDiv {
 		margin-top: 15px;
 		height: 70px;
-		width: 240px;		
+		width: 240px;
 		float: left;
 	}
-	
-	.nav img {		
+
+	.nav img {
 		height: 60px;
 	}
-	
+
 	.navAccDiv {
 		float:right;
 		height: 60px;
-		
+
 		text-align: center;
 	}
-	
-	
+
+
 	.navListDiv {
 		clear: both;
 	}
-		
-	
+
+
 </style>
 
 <body>
-<header>	
+<header>
 		<nav class="nav">
-			<div class="navDiv">			
+			<div class="navDiv">
 				<div class="navImgDiv">
-					<img src="./img/tripfulllogo.png">					
+					<img src="./img/tripfulllogo.png">
 				</div>
-				
+
 				<div class="navAccDiv">
 					<ul>
 						<li><a href="insertMembers.jsp">회원가입</a></li>
@@ -120,18 +120,18 @@
 						<li><a href="#">관리자</a></li>
 					</ul>
 				</div>
-				
-				<div class="navListDiv">	
+
+				<div class="navListDiv">
 					<ul>
 						<li><a href="#">항공권</a></li>
 						<li><a href="#">숙소</a></li>
 						<li><a href="#">렌터카 & 교통</a></li>
 						<li><a href="#">액티비티</a></li>
-						<li><a href="getLTList.do">랜선투어</a></li>
-						<li><a href="#">여행이야기</a></li>
+						<li><a href="getLTList.jsp">랜선투어</a></li>
+						<li><a href="getStoryList.jsp">여행이야기</a></li>
 					</ul>
 				</div>
-				
+
 			</div>
 		</nav>
 </header>

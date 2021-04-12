@@ -10,7 +10,7 @@
 	<center>
 		<h1>글 상세</h1>
 		<hr>
-		<form action="updateStory" method="post">
+		<form action="updateStory.do" method="post">
 			<input name="story_no" type="hidden" value="${story.story_no}" />
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
@@ -38,14 +38,14 @@
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="submit"
-						value="글 수정" /></td>
+						value="글 수정"></td>
 				</tr>
 			</table>
 		</form>
 		<hr>
 		<a href="insertStory.jsp">글등록</a>&nbsp;&nbsp;&nbsp; 
-		<a href="deleteStory?seq=${story.story_no}">글삭제</a>&nbsp;&nbsp;&nbsp;
-		<a href="getStoryList">글목록</a>
+		<a href="deleteStory.do?seq=${story.story_no}">글삭제</a>&nbsp;&nbsp;&nbsp;
+		<a href="getStoryList.do">글목록</a>
 	</center>
 </body>
 </html>

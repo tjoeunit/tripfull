@@ -19,24 +19,24 @@ public class StoryDAOMyBatisFirst extends SqlSessionDaoSupport{
 	}
 	
 	public void insertStory(StoryVO vo) {
-		getSqlSession().insert("StoryDAOTemp.insertBoard", vo);
+		getSqlSession().insert("StoryDAOTemp.insertStory", vo);
 	}
 	
 	public void updateStory(StoryVO vo) {
-		getSqlSession().update("StoryDAOTemp.updateBoard", vo);
+		getSqlSession().update("StoryDAOTemp.updateStory", vo);
 	}
 	
 	public void deleteStory(StoryVO vo) {
-		getSqlSession().delete("StoryDAOTemp.deleteBoard", vo);
+		getSqlSession().delete("StoryDAOTemp.deleteStory", vo);
 	}
 	
 	public StoryVO getStory(StoryVO vo) {
-		return getSqlSession().selectOne("StoryDAOTemp.getBoard", vo);
+		return getSqlSession().selectOne("StoryDAOTemp.getStory", vo);
 	}
 	
 	public List<StoryVO> getStoryList(StoryVO vo) {
 		// 검색 기능 전
-		//return myBatis.selectList("StoryDAOTemp.getBoardList", vo);
+		//return myBatis.selectList("StoryDAOTemp.getStoryList", vo);
 		
 		// 검색 기능 후
 		if(vo.getStorySearchCondition().equals("TITLE")){
