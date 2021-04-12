@@ -10,6 +10,8 @@ public class LanTripVO {
 	private MultipartFile	lantrip_thumb;
 	private int		lantrip_price;
 	private String	lantrip_area;
+	private String	lantrip_searchCondition;
+	private String	lantrip_searchKeyword;
 	
 	public int getLantrip_no() {
 		return lantrip_no;
@@ -65,6 +67,22 @@ public class LanTripVO {
 
 	public void setLantrip_area(String lantrip_area) {
 		this.lantrip_area = lantrip_area;
+	}
+
+	public String getLantrip_searchCondition() {
+		return lantrip_searchCondition;
+	}
+
+	public void setLantrip_searchCondition(String lantrip_searchCondition) {
+		this.lantrip_searchCondition = lantrip_searchCondition;
+	}
+
+	public String getLantrip_searchKeyword() {
+		return lantrip_searchKeyword;
+	}
+
+	public void setLantrip_searchKeyword(String lantrip_searchKeyword) {
+		this.lantrip_searchKeyword = lantrip_searchKeyword;
 	}
 
 	// 콜솔에서 확인 가능

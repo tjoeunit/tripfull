@@ -5,7 +5,7 @@
 <configuration>
 
 
-	<!-- 4월 9일 복사한 코드입니다 변경필요 !!! -->
+	<!-- Mabatis first 설정에 필요한 내용 -->
 
 	<!-- Alias 설정 -->
 	<typeAliases>
