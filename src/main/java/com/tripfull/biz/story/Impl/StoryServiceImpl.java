@@ -26,8 +26,8 @@ public class StoryServiceImpl implements StoryService {
 
 	@Override
 	public StoryVO getStory(StoryVO vo) {
-		StoryVO board = storyDAO.getStory(vo);
-		return board;
+		StoryVO story = storyDAO.getStory(vo);
+		return story;
 	}
 
 	@Override
