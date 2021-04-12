@@ -43,7 +43,7 @@
 			<c:forEach items="${storyList}" var="story">
 				<tr>
 					<td>${story.story_no}</td>
-					<td align="left"><a href="getStory?story_no=${story.story_no}">
+					<td align="left"><a href="getStory.do?story_no=${story.story_no}">
 							${story.story_title}</a></td>
 					<td>${story.members_no}</td>
 					<td>${story.story_date}</td>

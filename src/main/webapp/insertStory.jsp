@@ -14,7 +14,7 @@
 		<h1>글 등록</h1>
 		<a href="logout.do">Log-out</a>
 		<hr>
-		<form action="insertStory" method="post" enctype="multipart/form-data">
+		<form action="insertStory.do" method="post" enctype="multipart/form-data">
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
 					<td bgcolor="#58CCFF" width="70">제목</td>
@@ -39,7 +39,7 @@
 			</table>
 		</form>
 		<hr>
-		<a href="getStoryList">글 목록 가기</a>
+		<a href="getStoryList.do">글 목록 가기</a>
 	</center>
 </body>
 </html>
