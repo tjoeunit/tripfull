@@ -1,7 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<%@ include file="../../import/top.jsp" %>
+<%@ include file="../import/top.jsp" %>
+
+<style type="text/css">	
+	
+	
+</style>
+
+<main>
+	
+	<h1 class="MainTitle">	상품등록</h1>
 
 	<center>
 		<form action="insertLanTrip.do" method="post"  enctype="multipart/form-data">
@@ -37,7 +46,6 @@
 			</table>
 		</form>
 		<hr>
-		<a href="getLTList.do">글 목록 가기</a>
-	</center>
-</body>
-</html>
+
+</main>
+<%@ include file="../../import/top.jsp" %>

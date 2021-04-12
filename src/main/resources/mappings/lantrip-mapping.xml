@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BoardDAOTemp">
+	 
+	<insert id="insertLanTrip">
+	<![CDATA[
+		insert into lantrip(lantrip_no, lantrip_title, lantrip_price, lantrip_content, lantrip_area) 
+		values((select nvl(max(lantrip_no), 0)+1 from lantrip),#{lantrip_title},#{lantrip_price},#{lantrip_content}, #{lantrip_area})
+	]]>
+	</insert>
+	
+	<update id="updateLanTrip">
+	<![CDATA[
+		update lantrip set lantrip_title=#{lantrip_title}, lantrip_price=#{lantrip_price} where lantrip_no=#{lantrip_no}
+	]]>
+	</update>
+
+	<delete id="deleteLanTrip">
+	<![CDATA[
+		delete lantrip where lantrip_no=#{lantrip_no}
+	]]>
+	</delete>
+	
+	<select id="getLanTrip" resultType="lantrip">
+	<![CDATA[
+		select * from lantrip where lantrip_no=#{lantrip_no}
+	]]>
+	</select>
+	
+	<!-- <select id="getBoardList_T" resultType="board">
+	<![CDATA[
+		select * from springboard where title like '%'||#{searchKeyword}||'%' order by seq desc
+	]]>
+	</select>
+	
+	<select id="getBoardList_C" resultType="board">
+	<![CDATA[
+		select * from springboard where content like '%'||#{searchKeyword}||'%' order by seq desc
+	]]>
+	</select> -->
+	
+</mapper>

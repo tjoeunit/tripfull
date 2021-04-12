@@ -5,14 +5,14 @@
 <configuration>
 	
 	
-	<!-- 4월 9일 복사한 코드입니다 변경필요 !!! -->
+	<!-- Mabatis first 설정에 필요한 내용 -->
 	
 	<!-- Alias 설정 -->
 	<typeAliases>
 		
 		<!-- alias="board" 라고 설정 -->
 		<!-- mapping 파일에서는 resultType에 board라고 사용 -->
-		<!-- <typeAlias alias="board" type="com.springbook.biz.board.BoardVO"/>  -->
+		<typeAlias alias="lantrip" type="com.tripfull.biz.lantrip.LanTripVO"/>
 		
 	</typeAliases>	
 	
@@ -20,11 +20,9 @@
 	<mappers>
 	
 		<!-- 매핑파일 설정 -->
-		<!--<mapper resource="mappings/springboard-mapping.xml"/> -->
+		<mapper resource="mappings/lantrip-mapping.xml"/>
 		
 	</mappers>
-	<!-- 4월 9일 복사한 코드입니다 변경필요 !!! -->
-	
 	
 	
 	
