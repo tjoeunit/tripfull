@@ -57,7 +57,7 @@
 					<!-- id -> class 수정 예정 -->
 						<textarea id="story_editor1"></textarea>
 						 <script>
-	                        CKEDITOR.replace( 'story_editor1');
+	                        CKEDITOR.replace( 'story_editor1', {height:700});
 	                	</script>
 					</td>
 				</tr>
