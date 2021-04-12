@@ -45,11 +45,11 @@
 			<table class="story_insert">
 				<tr>
 					<td class="insert_story_subject">제목</td>
-					<td><input type="text"/></td>
+					<td><input type="text" size=80/></td>
 				</tr>
 				<tr>
 					<td class="insert_story_writer">작성자</td>
-					<td><input type="text" readonly="readonly"/></td>
+					<td><input type="text" readonly="readonly" size=80/></td>
 				</tr>
 				<tr>
 					<td class="insert_story_content">내용</td>

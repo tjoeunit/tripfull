@@ -47,7 +47,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type">
 <title>여행 이야기</title>
 </head>
 <body>
