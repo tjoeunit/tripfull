@@ -19,7 +19,7 @@ import com.tripfull.biz.story.StoryService;
 import com.tripfull.biz.story.StoryVO;
 
 @Controller
-@SessionAttributes("board")
+@SessionAttributes("story")
 public class StoryController {
 	@Autowired
 	private StoryService storyService;
@@ -56,7 +56,7 @@ public class StoryController {
 		*/
 		
 		// 3. 화면 전환
-		return "redirect:getStoryList";
+		return "redirect:getStoryList.do";
 	}
 	
 // 글 수정
@@ -69,7 +69,7 @@ public class StoryController {
 		// 2. DB 연동 처리
 		storyService.updateStory(vo);
 		// 3. 화면 전환
-		return "redirect:getStoryList";
+		return "redirect:getStoryList.do";
 	}
 	
 // 글 삭제
@@ -79,7 +79,7 @@ public class StoryController {
 				
 		storyService.deleteStory(vo);
 		
-		return "redirect:getStoryList";
+		return "redirect:getStoryList.do";
 	}
 	
 // RequestMapping이 실행되기 직전에 이 메소드가 먼저 호출 되어진다.(model에 값이 들어감)
@@ -116,9 +116,9 @@ public class StoryController {
 	public String getBoard(StoryVO vo, Model model) {
 		System.out.println("글 상세 조회 처리");
 		
-		StoryVO board = storyService.getStory(vo);
+		StoryVO story = storyService.getStory(vo);
 		
-		model.addAttribute("story", board);
+		model.addAttribute("story", story);
 		
 		return "getStory.jsp";
 	}
