@@ -24,7 +24,7 @@
 	background-color: #58CCFF;
 }
 .push_story{	/* 안먹음 */
-	text-align: center;
+	align-content: center;
 }
 
 </style>
@@ -63,8 +63,8 @@
 				</tr>
 				<tr>
 					<hr>
-					<div class="push_story">
-						<td><input type="submit" value=" 새글 등록 " /></td>
+					<div  class="push_story">
+						<td><input type="submit" value=" 새글 등록 "/></td>
 					</div>
 				</tr>
 			</table>

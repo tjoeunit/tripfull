@@ -29,8 +29,11 @@
 .story_no{
 	width: 7%;
 }
+.story_pic{
+	width: 10%;
+}
 .story_subject{
-	width: 50%;
+	width: 40%;
 }
 .story_writer{
 	width: 15%;
@@ -75,6 +78,7 @@
 		<table class = "story_top">
 			<tr class="top_story_list">
 				<th class="story_no"> 번호</th>
+				<th class="story_pic"> 사진</th>
 				<th class="story_subject">제목</th>
 				<th class="story_writer">작성자</th>
 				<th class="story_date">등록일</th>

@@ -74,7 +74,7 @@ public class StoryController {
 	
 // 글 삭제
 	@RequestMapping("/deleteStory.do")
-	public String deleteBoard(StoryVO vo) {
+	public String deleteStory(StoryVO vo) {
 		System.out.println("글 삭제 기능 처리");
 				
 		storyService.deleteStory(vo);
@@ -93,7 +93,7 @@ public class StoryController {
 	
 // 글 목록 보기
 	@RequestMapping("/getStoryList.do")
-	public String getBoardList(StoryVO vo, Model model) {	//ModelAndView의 Model 딴에 있는 변수를 매개변수로
+	public String getStoryList(StoryVO vo, Model model) {	//ModelAndView의 Model 딴에 있는 변수를 매개변수로
 		System.out.println("글 목록 검색 처리");
 	// 검색 기능 추가 Null check
 
@@ -113,7 +113,7 @@ public class StoryController {
 
 // 글 상세 조회
 	@RequestMapping("/getStory.do")
-	public String getBoard(StoryVO vo, Model model) {
+	public String getStory(StoryVO vo, Model model) {
 		System.out.println("글 상세 조회 처리");
 		
 		StoryVO story = storyService.getStory(vo);
