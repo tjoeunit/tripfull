@@ -11,7 +11,7 @@ import com.tripfull.biz.story.StoryVO;
 @Service
 public class StoryServiceImpl implements StoryService {
 
-	private StoryDAOMyBatisFirst storyDAO;
+	private StoryDAO storyDAO;
 	
 	@Override
 	public void insertStory(StoryVO vo) {

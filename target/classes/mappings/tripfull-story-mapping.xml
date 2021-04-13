@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="BoardDAO" >
-	<insert id="insertBoard">
+<!-- 파일 넣기 확인 다시 해야 함, 작성자랑 members_no 못하겠음, 댓글 넣기 기능 추가해야 함 -->
+
+<mapper namespace="StoryDAO" >
+	<insert id="insertStory">
 	<![CDATA[
-		insert into springboard(seq, title, writer, content)
-		values((select nvl(max(seq), 0)+1 from springboard),#{title},#{writer},#{content})
+		insert into story(story_no, story_title, members_no, story_content, story_date)
+		values((select nvl(max(story_no), 0)+1 from story),#{story_title},#{members_no},#{story_content},#{story_date})
 	]]>
 	</insert>
 
-	<update id="updateBoard">
+	<update id="updateStory">
 	<![CDATA[
-		update springboard set title=#{title}, content=#{content} where seq=#{seq}
+		update story set story_title=#{story_title}, story_content=#{story_content} where story_no=#{story_no}
 	]]>
 	</update>
 
-	<delete id="deleteBoard">
+	<delete id="deleteStory">
 	<![CDATA[
-		delete springboard where seq=#{seq}
+		delete story where story_no=#{story_no}
 	]]>
 	</delete>
 
-	<select id="getBoard" resultType="story">
+	<select id="getStory" resultType="story">
 	<![CDATA[
-		select * from springboard where seq=#{seq}
+		select * from story where story_no=#{story_no}
 	]]>
 	</select>
 
-	<select id="getBoardList" resultType="story">
+	<select id="getStoryList" resultType="story">
 	<![CDATA[
-		select * from springboard order by seq desc
+		select * from story order by story_no desc
 	]]>
 	</select>
 

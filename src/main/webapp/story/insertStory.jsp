@@ -1,5 +1,5 @@
 <%@page contentType="text/html; charset=UTF-8"%>
-<%@ include file="import/top.jsp" %>
+<%@ include file="../../import/top.jsp" %>
 
 <style type="text/css">
 .story_insert{
@@ -36,7 +36,7 @@
 <title>여행 이야기 등록</title>
 </head>
 <body>
- <script src="ckeditor/ckeditor.js"></script>
+ <script src="../../ckeditor/ckeditor.js"></script>
 
 	</script>
 	<center>
@@ -75,4 +75,4 @@
 </body>
 </html>
 
-<%@ include file="import/bottom.jsp" %>
+<%@ include file="../../import/bottom.jsp" %>

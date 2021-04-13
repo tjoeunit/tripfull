@@ -20,7 +20,7 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	//private BoardDAO boardDAO;
 	//private BoardDAOMyBatisFirst boardDAO;
-	private BoardDAOMyBatisSecond boardDAO;
+	private StoryDAO boardDAO;
 	// 이 한줄만 변경하면 마이바티스를 사용할 수 있다.
 
 	@Override

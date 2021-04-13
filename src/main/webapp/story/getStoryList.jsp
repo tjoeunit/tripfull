@@ -4,7 +4,7 @@
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-<%@ include file="import/top.jsp" %>
+<%@ include file="../../import/top.jsp" %>
 
 <style type="text/css">
 
@@ -99,4 +99,4 @@
 	</center>
 </body>
 </html>
-<%@ include file="import/bottom.jsp" %>
+<%@ include file="../../import/bottom.jsp" %>
