@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<<<<<<< Updated upstream:src/main/resources/mappings/springboard-mapping.xml
-<mapper namespace="BoardDAOTemp">
-=======
 <mapper namespace="BoardDAO" >
 	<insert id="insertBoard">
 	<![CDATA[
@@ -23,18 +20,14 @@
 		delete springboard where seq=#{seq}
 	]]>
 	</delete>
->>>>>>> Stashed changes:src/main/resources/mappings/tripfull-board-mapping.xml
 
 	<select id="getBoard" resultType="board">
 	<![CDATA[
 		select * from springboard where seq=#{seq}
 	]]>	
 	</select>
-<<<<<<< Updated upstream:src/main/resources/mappings/springboard-mapping.xml
 	
-=======
 
->>>>>>> Stashed changes:src/main/resources/mappings/tripfull-board-mapping.xml
 	<select id="getBoardList" resultType="board">
 	<![CDATA[
 		select * from springboard order by seq desc

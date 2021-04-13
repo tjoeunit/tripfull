@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="./img/favicon16.ico">
+<link rel="shortcut icon" href="../img/favicon16.ico">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -110,7 +110,7 @@
 		<nav class="nav">
 			<div class="navDiv">
 				<div class="navImgDiv">
-					<img src="./img/tripfulllogo.png">
+					<img src="../img/tripfulllogo.png">
 				</div>
 
 				<div class="navAccDiv">
