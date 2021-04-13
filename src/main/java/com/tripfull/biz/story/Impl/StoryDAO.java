@@ -32,13 +32,13 @@ public class StoryDAO {
 	
 	public List<StoryVO> getStoryList(StoryVO vo) {
 		// 검색 기능 전
-		//return myBatis.selectList("StoryDAOTemp.getStoryList", vo);
-		if(vo.getStorySearchCondition().equals("TITLE")){
-			return mybatis.selectList("StoryDAOTemplate.getStoryList_T", vo);
-		}else if(vo.getStorySearchCondition().equals("CONTENT")){
-			return mybatis.selectList("StoryDAOTemplate.getStoryList_C", vo);			
-		}else {
-			return mybatis.selectList("StoryDAOTemplate.getStoryList_T", vo);
-		}
+		return mybatis.selectList("StoryDAOTemp.getStoryList", vo);			//구현해야 함!
+		/*
+		 * if(vo.getStorySearchCondition().equals("TITLE")){ return
+		 * mybatis.selectList("StoryDAOTemplate.getStoryList_T", vo); }else
+		 * if(vo.getStorySearchCondition().equals("CONTENT")){ return
+		 * mybatis.selectList("StoryDAOTemplate.getStoryList_C", vo); }else { return
+		 * mybatis.selectList("StoryDAOTemplate.getStoryList_T", vo); }
+		 */
 	}
 }

@@ -36,7 +36,7 @@
 <title>여행 이야기 등록</title>
 </head>
 <body>
- <script src="../../ckeditor/ckeditor.js"></script>
+ <script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
 
 	</script>
 	<center>
